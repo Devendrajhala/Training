@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <carriers>
+            <express>
+                <active>0</active>
+                <name>Express</name>
+                <price>10</price>
+                <title>Shipping Express</title>
+                <sort_order>15</sort_order>
+                <model>TrainingDevendra\CustomShipping\Model\Carrier\Express</model>
+            </express>
+        </carriers>
+    </default>
+</config>
