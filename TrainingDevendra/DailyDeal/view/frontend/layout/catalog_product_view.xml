@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+	<head>
+        <css src="TrainingDevendra_DailyDeal::css/jquery.countdownTimer.css"/>
+    </head>
+    <referenceContainer name="product.info.main">
+        <block class="TrainingDevendra\DailyDeal\Block\Product\View" name="product.info.timer" as="productInfoCountdown" template="TrainingDevendra_DailyDeal::countdown.phtml" after="alert.urls"/>        
+    </referenceContainer>
+</page>
