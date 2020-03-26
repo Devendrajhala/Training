@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="orderfee" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1"
+                 showInStore="1">
+            <class>separator-top</class>
+            <label>Order Fee</label>
+            <tab>sales</tab>
+            <resource>Magento_Catalog::config_catalog</resource>
+
+            <group id="orderfee" translate="label" type="text" sortOrder="500" showInDefault="1" showInWebsite="1"
+                   showInStore="1">
+                <label>Order Fees</label>
+                <field id="status" translate="label comment" type="select" sortOrder="1" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Apply Additional Fee</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="name" translate="label comment" type="text" sortOrder="2" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Fee Name</label>                 
+                </field>
+                <field id="orderfee_amount" translate="label comment" type="text" sortOrder="3" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Order Fee Amount</label>
+                    <comment>Add fee in %</comment>
+                    <validate>validate-number validate-zero-or-greater</validate>
+                </field>
+                <field id="minimum_order_amount" translate="label comment" type="text" sortOrder="4" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Minimum Order Amount To Display</label>
+                    <comment><![CDATA[Greaterthan or equal to]]></comment>
+                    <validate>validate-number validate-zero-or-greater</validate>
+                </field>
+            </group>
+
+        </section>
+
+    </system>
+</config>
