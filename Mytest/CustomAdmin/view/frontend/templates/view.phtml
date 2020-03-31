@@ -1,0 +1,36 @@
+<?php 
+$collection = $this->getSingleData();
+?>
+<table class="data table" id="test-data-table">
+    <caption class="table-caption">Member Data</caption>
+    <thead>
+        <tr>
+            <th scope="col" class="col name">Name</th>
+            <th><?php echo $collection->getname();?></th>
+        </tr> 
+        <tr>
+            <th scope="col" class="col class">Class</th>
+            <th><?php echo  $collection->getclass();?></th>
+        </tr>   
+        <tr>
+            <th scope="col" class="col gender">Gender</th>
+            <th><?php  echo $collection->getgender();?></th>
+        </tr> 
+        <tr>
+            <th scope="col" class="col country">Country</th>
+            <th><?php  echo $collection->getcountry();?></th>
+        </tr> 
+        <tr>
+            <th scope="col" class="col name">Status</th>
+        <th><?php 
+                if($collection->getstatus()==0) {
+                    echo "No";
+                } else{
+                    echo "Yes";
+                }
+
+                ?></th>
+        </tr> 
+    </thead>
+    
+</table>

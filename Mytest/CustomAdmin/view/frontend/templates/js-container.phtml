@@ -1,0 +1,110 @@
+<!--<form data-mage-init='{"validation":{}}'>
+    <div class="control">
+        <input type="text" name="Email" id="email" class="input-text"
+        placeholder="<?/*= __('Your Email')*/?>" data-validate="{ required: true, 'validate-email': true}" />
+    </div>
+    <button type="submit" class="action-primary"><?/*= __('Submit')*/?> </button>
+</form>-->
+
+<!--<div id="my-collapsible" data-mage-init='{"Mytest_CustomAdmin/js/dynamic-collapsible":{"ajaxContent": true}}'>
+    <div data-role="title">
+        <h2> this is test <button data-role="trigger">Go</button></h2>
+    </div>
+    <div id="example" data-role="content"></div>
+    <a href="<?/*= $block->getViewFileUrl('Mytest_CustomAdmin/example-content.html')*/?>" data-ajax="true"></a>
+
+</div>-->
+
+<!--<div data-bind="scope: 'exampleUiComponent'">
+    <p data-bind="text:title"></p>
+    <table data-bind="foreach: items">
+        <tr>
+            <td data-bind="text: name"></td>
+            <td data-bind="text: qty"></td>
+            <td data-bind="text: price"></td>
+
+        </tr>
+    </table>
+    <div>Additional Charge: <span data-bind="text: additional_charge"></span></div>
+    <strong>Total: <span data-bind="text: total()"></span></strong>.
+</div>-->
+
+<!--
+<script type="text/x-magento-init">
+    {
+        "*":{
+            "Magento_Ui/js/core/app":{
+                "components": {
+                    "exampleUiComponent":{
+                        "component":"Mytest_CustomAdmin/js/ui-component"
+                    }
+                }
+            }
+        }
+    }
+</script>-->
+<!--<div data-bind="scope: 'component-a'">
+    <p data-bind="text:title"></p>
+    <p data-bind="text:additional_charge"></p>
+</div>
+<div data-bind="scope: 'component-b'">
+    <p data-bind="text:title"></p>
+    <p data-bind="text:value"></p>
+</div>-->
+
+<!--<script type="text/x-magento-init">
+    {
+        "*":{
+            "Magento_Ui/js/core/app":{
+                "components": {
+                    "component-a":{
+                        "component":"Mytest_CustomAdmin/js/ui-component-a"
+                    },
+                    "component-b":{
+                        "component":"Mytest_CustomAdmin/js/ui-component-b",
+                        "provider":"component-a",
+                        "providerProperty": "value"
+                    }
+                }
+            }
+        }
+    }
+</script>-->
+
+<h1 data-mage-init='{"Mytest/title": {}}' />
+<h2> Test</h2>
+
+<div data-bind="scope: 'mutator'">
+    <!-- ko template: getTemplate() --><!-- /ko -->
+</div>
+
+
+
+<script type="text/x-magento-init">
+    {
+        "*":{
+            "Magento_Ui/js/core/app":{
+                "components": {
+                    "mutator":{
+                        "component":"Mytest_CustomAdmin/js/value-mutator",
+                        "template": "Mytest_CustomAdmin/button",
+                        "children":{
+                            "display":{
+                                "component":"Mytest_CustomAdmin/js/value-display",
+                                "template": "Mytest_CustomAdmin/display"
+                            }
+                        }
+                    },
+                    "startSimple":{
+                        "component":"Mytest_CustomAdmin/js/plain-view-model"
+                    }
+
+                }
+            }
+        }
+    }
+</script>
+
+
+<div id="target" data-mage-init='{"Mytest_CustomAdmin/js/requirejs-example" : {"base_url": "/" }}'></div>
+

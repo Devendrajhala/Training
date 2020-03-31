@@ -1,0 +1,50 @@
+<?php 
+$collection = $this->getTestCollection();
+//foreach ($collection as $key => $data):
+   // echo $data->getname();
+    //endforeach;
+//print_r($collection);
+//echo $this->getTest();
+?>
+
+
+<table class="data table" id="test-data-table">
+    <caption class="table-caption">Member Data</caption>
+    <thead>
+        <tr>
+            <th scope="col" class="col name">Name</th>
+            <th scope="col" class="col class">Class</th>
+            <th scope="col" class="col gender">Gender</th>
+            <th scope="col" class="col country">Country</th>
+            <th scope="col" class="col status">Status</th>
+             <!-- <th scope="col" class="col status">Color</th> -->
+            <th scope="col" class="col actions">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach ($collection as $key => $data): ?>
+            <tr>
+                <td data-th="Name" class="col title"><?php echo $data->getname(); ?></td>
+                <td data-th="Class" class="col author"><?php echo $data->getclass(); ?></td>
+                <td data-th="Gender" class="col gender"><?php echo $data->getgender(); ?></td>
+                <td data-th="Country" class="col country"><?php echo $data->getcountry(); ?></td>
+                <td data-th="Status" class="col status">
+                    <?php 
+                    if($data->getstatus()==0) {
+                        echo "No";
+                    } else{
+                        echo "Yes";
+                    }
+
+                    ?>
+                </td>
+               <!--  <td data-th="Country" class="col country"><?php echo $data->getcolor(); ?></td> -->
+                <td data-th="Actions" class="col actions">
+                    <a href="<?php echo $block->getBaseUrl().'customadmin/index/view/id/'.$data->getEntityId(); ?>" class="action view">
+                        <span>View</span>
+                    </a>
+                </td>
+            </tr>
+        <?php endforeach; ?>
+    </tbody>
+</table>

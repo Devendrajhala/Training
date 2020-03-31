@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="Custom_Admin" sortOrder="120" translate="label">
+            <label>Custom Admin</label>
+        </tab>
+        <section id="FirstSection" translate="label" sortOrder="100" showInWebsite="1" showInStore="1" showInDefault="1">
+            <label>First Section</label>
+            <tab>Custom_Admin</tab>
+            <resource>Mytest_CustomAdmin::parent</resource>
+            <group id="Firstgroup"  showInWebsite="1" showInStore="1" showInDefault="1">
+                <label>First Group</label>
+                <field id="Firstfield" showInWebsite="1" showInStore="1" showInDefault="1" translate="label"
+                       type="text" sortOrder="100">
+                    <label> First Field</label>
+                </field>
+                <field id="Secondfield" showInWebsite="1" showInStore="1" showInDefault="1" type="select"
+                       sortOrder="100" translate="label">
+                    <label> First Select</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+
+            </group>
+        </section>
+    </system>
+</config>

@@ -1,0 +1,34 @@
+<script type="text/x-magento-init">
+    {
+        "*":{
+            "Magento_Ui/js/core/app":{
+                "components": {
+                    "exampleUiComponent":{
+                        "component":"Mytest_CustomAdmin/js/ui-component-test",
+                        "template": "Mytest_CustomAdmin/ui-component-template"
+                    },
+                    "translateUiComponent":{
+                        "component":"Mytest_CustomAdmin/js/ui-component-translate",
+                        "template": "Mytest_CustomAdmin/localized-template"
+                    },
+                    "startSimple":{
+                        "component":"Mytest_CustomAdmin/js/plain-view-model-a",
+                        "base_url": "<?= $block->escapeJs($block->getBaseUrl())?>"
+                    }
+                }
+            }
+        }
+    }
+</script>
+<div data-bind="scope: 'exampleUiComponent'">
+    <div data-bind="template: getTemplate()"></div>
+
+</div>
+<div data-bind="scope: 'translateUiComponent'">
+    <div data-bind="i18n: "welcome!'"></div>
+    <div data-bind="template: getTemplate()"></div>
+</div>
+
+<div data-bind="scope: 'startSimple'">
+    <pre data-bind="text: output"></pre>
+</div>
